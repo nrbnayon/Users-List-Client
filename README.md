@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# User List and Details Webpage
+
+[Live](https://user-list-khaki.vercel.app/)
+
+This project is a simple Next.js application that displays a list of users and the details of the selected user. The design reference is taken from a Figma design, and data is fetched from a provided API.
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Components](#components)
+- [API Handling](#api-handling)
+- [Error Handling](#error-handling)
+- [License](#license)
+
+## Features
+
+- Display a list of users with their profile pictures and names.
+- Show user details on the right-hand side when a user is selected.
+- Loader/spinner during data fetching.
+- Proper handling of API errors and empty responses.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Material UI](https://mui.com/)
+- [Axios](https://axios-http.com/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (>=14.0.0)
+- npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/yourusername/your-project.git
+   cd your-project
+   ```
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-## Deploy on Vercel
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## API Handling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+API calls are made using `axios`, and data fetching is handled in the `useEffect` hook in `index.js`.
+
+## Error Handling
+
+- Loader/spinner is displayed during data fetching.
+- Proper error message is shown if the API call fails.
+- "No data to show" message is displayed if the response is empty.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
